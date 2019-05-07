@@ -13,9 +13,9 @@ class Search extends Component{
   postreq(e){
     e.preventDefault();
     console.log("post");
-    axios.post('/http://localhost:3000/product/', {
-      name: 'Fred',
-      price: '4578'
+    axios.post('http://localhost:3000/product/', {
+      "name": "Fred",
+      "price": "4578"
     })
     .then(function (response) {
       console.log(response);
