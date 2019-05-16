@@ -69,6 +69,8 @@ console.log(unm);
             console.log(totalPrice);
             console.log(unm);
 
+            var niCard=[];
+            var empType="Non Government";
             // axios.get('http://localhost:3000/govs/nic/'+nic+'/',{headers: {'Content-Type': 'application/json'}}).then(response => {
             //     const dataa=response.data
                   
@@ -86,7 +88,20 @@ console.log(unm);
             
             axios.get('http://localhost:3000/govs/nic/',{headers: {'Content-Type': 'application/json'}}).then(response => {
                 const dataa=response.data
-                console.log(dataa);
+                
+                niCard=dataa.result;
+               var i;
+                for(i=0;i<niCard.length;i++){
+                    console.log(niCard[i].nic);
+                    if(niCard[i].nic===nic)
+                    {console.log("matched");
+                    empType="Government"
+                    break;
+                    }
+                    else{console.log(" not matched");}
+                }
+                console.log('i is ',i);
+                console.log(empType);
             });
 
 
