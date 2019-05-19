@@ -71,6 +71,7 @@ console.log(unm);
 
             var niCard=[];
             var empType="Non Government";
+            var discountedPrice=totalPrice;
             // axios.get('http://localhost:3000/govs/nic/'+nic+'/',{headers: {'Content-Type': 'application/json'}}).then(response => {
             //     const dataa=response.data
                   
@@ -96,19 +97,41 @@ console.log(unm);
                     if(niCard[i].nic===nic)
                     {console.log("matched");
                     empType="Government"
+                    discountedPrice=totalPrice-(totalPrice*50/100);
                     break;
                     }
                     else{console.log(" not matched");}
                 }
                 console.log('i is ',i);
                 console.log(empType);
+                console.log("discounted price : ",discountedPrice);
+
+                axios.delete('http://localhost:3000/bookResults/').then(function (response) {
+                    console.log('successfully deleted data');
+                    console.log(response);
+                  }).catch(function (error) {
+                    console.log(error);
+                  });
+
+                axios.post('http://localhost:3000/bookResults/', {
+                    tname: trainn,
+                    nic: nic,
+                    not:qty,
+                    empType:empType,
+                    firstPrice:totalPrice,
+                    disountedPrice:discountedPrice
+                  }, {headers:{'Accept':'application/json'}})
+                
             });
 
 
 
         });
    
-
+        this.refs.inputNIC.value="";
+        this.refs.inputTname.value="";
+        this.refs.inputQTY.value="";
+        this.refs.uname.value="";
 
     }
 

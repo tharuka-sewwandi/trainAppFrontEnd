@@ -3,6 +3,7 @@ import Search from './components/Search';
 //import Trainresult from './components/Trainresult';
 import Book from './components/bookTrain';
 import BookingResult from './components/bookingResult';
+import Payment from './components/payment';
 
 import './App.css';
 
@@ -29,6 +30,9 @@ render(){
       <div className="row">
       <div className="col-md-6">
      <BookingResult/>
+      </div>
+      <div className="col-md-6">
+       <Payment/>
       </div>
       </div>
       </div>
