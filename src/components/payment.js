@@ -30,17 +30,18 @@ class payment extends Component{
             <form>
   <fieldset>
     
-
+  <div className="row"><br/></div>
     <div className="form-group">
+        
     <div className="row">
     <div className="col-md-2"></div>
     <div className="col-md-10">
     <div className="row">
     <div className="col-md-5">
-            <button type="button" className="btn btn-primary" onClick={this.creditPaymen.bind(this)} >Credit Payment</button>
+            <button type="button" className="btn btn-info" onClick={this.creditPaymen.bind(this)} >Credit Payment</button>
             </div>
             <div className="col-md-5">
-            <button type="button" className="btn btn-primary" onClick={this.mobilePayment.bind(this)} >mobile Payment</button>
+            <button type="button" className="btn btn-info" onClick={this.mobilePayment.bind(this)} >mobile Payment</button>
             </div>
             </div>
             </div>

@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import axios from 'axios';
 
 
+
 class Search extends Component{
   
   state = {
@@ -54,7 +55,7 @@ class Search extends Component{
     let trainInfo = this.state.trainInfo.map((trainInfo) => {
       console.log('train name : ',trainInfo.name)
       return(
-        <tr className="table-primary" key={trainInfo.id}>
+        <tr className="table-secondary" key={trainInfo.id}>
         <td>{trainInfo.name}</td>
         <td>{trainInfo.depatureStation}</td>
         <td>{trainInfo.depatureTime}</td>
@@ -73,16 +74,19 @@ class Search extends Component{
     <div className="form-group">
       
       
-      <button type="button" className="btn btn-primary btn-lg btn-block" onClick={this.componentWillMount.bind(this)}>search</button>
-      <button type="button" className="btn btn-primary" onClick={this.postreq.bind(this)}>post</button>
+      
       
       
       <div>
-      <h2>Train Details</h2>
+      <div class="card text-white bg-primary mb-3">
+  <div class="card-header">Train Details</div>
+  </div>
+      
+      
                 <table className="table table-hover">
-                    <thead>
-                    <tr className="table-secondary">
-                        <th scope="col">Name</th>
+                    <thead >
+                    <tr className="table-primary">
+                        <th scope="col" >Name</th>
                         <th scope="col">Depature Station</th>
                         <th scope="col">Depature Time</th>
                         <th scope="col">Arrive Station</th>
@@ -90,7 +94,7 @@ class Search extends Component{
                         <th scope="col">Ticket Price</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {trainInfo}
                     </tbody>
                 </table>

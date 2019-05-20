@@ -24,30 +24,34 @@ class bookingResult extends Component{
       console.log('train name : ',trainInfo.name)
       return(
           <div>
-        <tr >
-             <td>Train name</td>
-              <td>{trainInfo.tname}</td>
+        <div><br/></div>
+
+          <div className="bookingResults">
+        <tr  >
+             <td className="table-secondary">Train name</td>
+              <td className="table-danger">{trainInfo.tname}</td>
         </tr>
         <tr >
-        <td>User nic</td>
-              <td>{trainInfo.nic}</td>
+        <td className="table-secondary">User nic</td>
+              <td className="table-danger">{trainInfo.nic}</td>
         </tr>
         <tr>
-              <td>Number of tickets</td>
-              <td>{trainInfo.not}</td>
+              <td className="table-secondary">Number of tickets</td>
+              <td className="table-danger">{trainInfo.not}</td>
               </tr>
               <tr>
-              <td>Employee Type</td>
-              <td>{trainInfo.empType}</td>
+              <td className="table-secondary">Employee Type</td>
+              <td className="table-danger">{trainInfo.empType}</td>
               </tr>
               <tr>
-              <td>First Price</td>
-              <td>{trainInfo.firstPrice}</td>
+              <td className="table-secondary">First Price</td>
+              <td className="table-danger">{trainInfo.firstPrice}</td>
               </tr>
               <tr>
-              <td>Discounted Price</td>
-              <td>{trainInfo.disountedPrice}</td>
+              <td className="table-secondary">Discounted Price</td>
+              <td className="table-danger">{trainInfo.disountedPrice}</td>
               </tr>
+        </div>
         </div>
       )
     });
@@ -60,7 +64,7 @@ class bookingResult extends Component{
     <div className="form-group">
       
       
-      <button type="button" className="btn btn-primary btn-lg btn-block" onClick={this.posrBooking.bind(this)}>Show booking results</button>
+      <button type="button"  className="btn btn-warning btn-block"  onClick={this.posrBooking.bind(this)}>Show booking results</button>
      
       
       

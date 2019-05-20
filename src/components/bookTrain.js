@@ -146,8 +146,11 @@ render(){
             <span>{dynamicData.tname}</span>
             </div>)
             }
-            
-        <form>
+            <div class="card text-white bg-primary mb-3">
+  <div class="card-header">Make Your Order</div>
+  </div>
+           
+        <form className="frm">
   <fieldset>
   <div class="form-group">
       <label >Name</label>
@@ -186,7 +189,7 @@ render(){
                             }}/>
 
     </div>
-    <button type="submit" class="btn btn-primary" onClick={this.submitDetails.bind(this)}>Submit</button>
+    <button type="submit" className="btn btn-success" onClick={this.submitDetails.bind(this)}>Submit</button><br/>
   </fieldset>
   </form>
   </div>

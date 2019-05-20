@@ -36,7 +36,7 @@ class credit extends Component{
     render(){
         return(
             <div>
-                <h1>Do payments from Your Credit Card</h1>
+                <h1 className="hd">Do payments from Your Credit Card</h1>
                 <form>
                  <fieldset>
                  <div class="form-group">
